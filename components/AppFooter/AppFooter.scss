@@ -1,0 +1,64 @@
+/* stylelint-disable-next-line block-no-empty */
+.app-footer {
+    margin-top: -4rem;
+    position: relative;
+    z-index: zindex($zLayout, appFooter);
+
+    &:global(.skewed-section) {
+        padding-bottom: 0;
+
+
+        @include respond-to(MEDIUM){
+            padding-bottom: 4rem;
+        }
+    }
+
+    .logo {
+        display: block;
+        width: 15rem;
+
+        margin: auto;
+
+        @include respond-to(MEDIUM){
+            margin: initial;
+        }
+    }
+
+    :global(.heading-02) {
+        color: $colorWhite;
+    }
+
+    :global(.copy-01) {
+        color: $colorWhite;
+        display: block;
+    }
+
+    .navigation {
+        padding: 0;
+        text-align: center;
+
+        @include respond-to(MEDIUM){
+            padding: 4rem 0;
+        }
+
+        .footer-items {
+            h2 {
+                color: $colorBlack;
+            }
+        }
+
+        @include respond-to(MEDIUM){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            text-align: left;
+
+            padding: 6rem 0;
+
+            width: 100%;
+            max-width: ($gridSize + $gutterWidth) * 10;
+            
+        }
+    }
+}
